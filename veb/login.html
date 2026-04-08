@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="az">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #e3f2fd;
+            text-align: center;
+            margin-top: 100px;
+        }
+
+        .container {
+            background: white;
+            padding: 20px;
+            width: 300px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+        }
+
+        input {
+            display: block;
+            margin: 10px auto;
+            padding: 10px;
+            width: 90%;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: blue;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 95%;
+        }
+
+        a {
+            display: block;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+    <h2>Giriş</h2>
+
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Şifrə">
+
+    <button onclick="login()">Daxil ol</button>
+
+    <a href="register.html">Qeydiyyatdan keç</a>
+</div>
+
+<script>
+function login() {
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    if (!username || !password) {
+        alert("Boş xana ola bilməz");
+        return;
+    }
+
+    // Burada sadəcə lokal yoxlama aparılır — baza və ya server yoxdur
+    alert("Login uğurludur");
+    window.location.href = "mamedfood.html";
+}
+</script>
+
+</body>
+</html>
